@@ -115,3 +115,33 @@ nav {
     /* grid-column: 2/3;
     grid-row: 2/4; */
 }
+
+.top{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    text-decoration: none;
+}
+
+.banner{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.big{
+    grid-column:1/2;
+    grid-row: 1/3;
+    background-color: orange;
+}
+.small1{
+    background-color: yellow;
+    grid-column: 2/3 ;
+    grid-row: 1/2;
+}
+.small2{
+    background-color: lightgreen;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
