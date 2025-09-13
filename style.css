@@ -150,7 +150,99 @@ nav {
     display: flex;
     justify-content: center;
     text-align: center;
+    /* background-color: burlywood; */
     li{
         padding: 10px;
+        /* background-color: chocolate; */
+    }
+
+    li:hover{
+        background-color: rgb(228, 222, 205);
     }
 }
+
+#sub-menu{
+    display: none;
+}
+
+#main-menu li:hover #sub-menu{
+    display: block;
+}
+
+#sub-menu{
+    list-style-type: none;
+}
+
+#main-menu li{
+    position:relative;
+}
+
+#sub-menu{
+    position: absolute;
+    left: -10px;
+    top: 40px;
+}
+
+#sub-menu li:hover{
+    background-color: rgb(244, 214, 132);
+}
+
+#menu_2{
+    background-color: rosybrown;
+}
+
+/* css nang cao  */
+.fade-in{
+    opacity: 0;
+    animation: abc 5s forwards
+}
+
+@keyframes abc{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.slide-in{
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: abc2 3s forwards;
+}
+
+@keyframes abc2{
+    0%{
+        /* left: -100%; */
+        left: 0;
+        top: 0;
+    }
+    100%{
+        /* left: 0; */
+        left: 200px;
+        top: 200px;
+    }
+}
+
+.rotate{
+    animation: abc3 3s linear infinite;
+}
+
+@keyframes abc3{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+h1:hover{
+    transform: scale(1.5);
+}
+
+#h1_hover{
+    transform: scale(1) !important;
+}
+
