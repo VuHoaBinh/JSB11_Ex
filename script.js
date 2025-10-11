@@ -1,7 +1,5 @@
-
-// global email, password in register form
-let email_global = "";
-let password_global = "";
+let email_global = localStorage.getItem("registered_email") || "";
+let password_global = localStorage.getItem("registered_password") || "";
 
 // const: hằng số
 // ES6+
@@ -58,9 +56,9 @@ async function register(event) {
         });
         return; // dừng hàm register
     }
-    // gán giá trị cho biến global
-    email_global = email;
-    password_global = password;
+    // Lưu vào localStorage để dữ liệu không bị mất khi chuyển trang
+    localStorage.setItem("registered_email", email);
+    localStorage.setItem("registered_password", password);
 
     Swal.fire({
       title: "Đăng ký thành công",
